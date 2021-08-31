@@ -33,6 +33,10 @@ class ConferenceRoom {
     getAttendeesCount() {
         return this.attendeeCount;
     }
+
+    printStatus() {
+        console.log(`Room ${this.roomName} contains ${this.getAttendeesCount} attendees`)
+    }
 }
 
 module.exports = ConferenceRoom;
