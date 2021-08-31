@@ -3,7 +3,8 @@
   "scripts": {
     "dev": "slidev --open",
     "build": "slidev build",
-    "export": "slidev export"
+    "export": "slidev export",
+    "test": "jest"
   },
   "dependencies": {
     "@slidev/cli": "^0.19.8",
@@ -13,5 +14,8 @@
   "name": "jest-presentation",
   "devDependencies": {
     "jest": "^27.1.0"
+  },
+  "volta": {
+    "node": "14.17.5"
   }
 }
