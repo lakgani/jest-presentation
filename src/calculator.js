@@ -1,20 +1,32 @@
-const InvalidParametersError = new Error("Invalid parameter(s) provided");
-function add(x,y) {
-    if(!Number.isFinite(x) || !Number.isFinite(y)) {
-        throw InvalidParametersError;
+
+class InvalidParametersError extends Error {
+    constructor() {
+        super();
     }
-    return x + y;
+}
+class Calculator {
+    
+    constructor(){
+        // console.log("Creating new calculator");
+    }
+
+    static InvalidParametersError = new Error("Invalid parameter(s) provided");
+
+    add(x,y) {
+        if(!Number.isFinite(x) || !Number.isFinite(y)) {
+            throw new InvalidParametersError();
+        }
+        return x + y;
+    }
+    
+    subtract(x,y) {
+        if(!Number.isFinite(x) || !Number.isFinite(y)) {
+            throw new InvalidParametersError();
+        }
+        return x - y;
+    }
 }
 
-function subtract(x,y) {
-    if(!Number.isFinite(x) || !Number.isFinite(y)) {
-        throw InvalidParametersError;
-    }
-    return x - y;
-}
+module.exports = Calculator
 
-module.exports = {
-    add,
-    subtract,
-    InvalidParametersError
-}
+module.exports.InvalidParametersError = InvalidParametersError
