@@ -13,7 +13,8 @@
   },
   "name": "jest-presentation",
   "devDependencies": {
-    "jest": "^27.1.0"
+    "jest": "^27.1.0",
+    "prettier": "^2.3.2"
   },
   "volta": {
     "node": "14.17.5"
