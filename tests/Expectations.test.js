@@ -55,22 +55,18 @@ test("toMatch usage", () => {
 });
 
 test("toContain usage", () => {
-    const arr = [1,2,3]
-  
-    expect(arr).toContain(3);
+  const arr = [1, 2, 3];
+
+  expect(arr).toContain(3);
 });
 
 test("toThrow usage", () => {
-  
-    expect(() => {
-        throw new Error("something happened")
-    }).toThrow("something");
+  expect(() => {
+    throw new Error("something happened");
+  }).toThrow("something");
 });
 
 test("resolves/rejects usage", () => {
-  
-    expect(Promise.resolve("success")).resolves.toBe("success")
-    expect(Promise.resolve("success")).rejects.toBe("success")
+  expect(Promise.resolve("success")).resolves.toBe("success");
+  // expect(Promise.reject("failure")).rejects.toBe("success");
 });
-
-

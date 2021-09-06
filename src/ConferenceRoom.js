@@ -1,42 +1,44 @@
 class InvalidCount extends Error {
-    constructor(count) {
-        super(`Invalid count ${count}`);
-    }
+  constructor(count) {
+    super(`Invalid count ${count}`);
+  }
 }
 
 class ConferenceRoom {
-    constructor(roomName) {
-        this.roomName = roomName;
-        this.attendeeCount = 0;
-    }
+  constructor(roomName) {
+    this.roomName = roomName;
+    this.attendeeCount = 0;
+  }
 
-    validateCount(count) {
-        if (!Number.isFinite(count)) {
-            throw new InvalidCount(count);
-        }
+  validateCount(count) {
+    if (!Number.isFinite(count)) {
+      throw new InvalidCount(count);
     }
+  }
 
-    addAttendees(count) {
-        this.validateCount(count)
-        this.attendeeCount+= count;
-    }
-    
-    removeAttendees(count) {
-        this.validateCount(count);
+  addAttendees(count) {
+    this.validateCount(count);
+    this.attendeeCount += count;
+  }
 
-        if(count > this.attendeeCount) {
-            throw new InvalidCount(count);
-        }
-        this.attendeeCount-= count;
-    }
+  removeAttendees(count) {
+    this.validateCount(count);
 
-    getAttendeesCount() {
-        return this.attendeeCount;
+    if (count > this.attendeeCount) {
+      throw new InvalidCount(count);
     }
+    this.attendeeCount -= count;
+  }
 
-    printStatus() {
-        console.log(`Room ${this.roomName} contains ${this.getAttendeesCount} attendees`)
-    }
+  getAttendeesCount() {
+    return this.attendeeCount;
+  }
+
+  printStatus() {
+    console.log(
+      `Room ${this.roomName} contains ${this.getAttendeesCount} attendees`
+    );
+  }
 }
 
 module.exports = ConferenceRoom;
