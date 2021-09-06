@@ -81,7 +81,6 @@ Expect
 - toMatch
 - toContain
 - toThrow
-- resolves/rejects
 
 `npm run test expect`
 
@@ -108,6 +107,20 @@ Expect
 
 # Coverage
 
+`--coverage`
+`--coverageThreshold`
+```json
+{
+  "global": {
+	"branches": 80,
+	"functions": 80,
+	"lines": 80,
+	"statements": -05
+  }
+}
+```
+
+`npm run test -- --coverage --coverageThreshold='{"global": {"branches": 80,"functions": 95,"lines": 80,"statements": -5}}'`
 ---
 
 # Useful config options
@@ -115,7 +128,6 @@ Expect
 - watch
 - watch-all
 - verbose
-- coverage
 - testTimeout
 
 ---

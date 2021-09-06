@@ -1,6 +1,6 @@
 const { fetchDataSuccess, fetchDataFailed } = require("../src/Async.js");
 
-test("should showcase issue with async code", () => {
+test.skip("should showcase issue with async code", () => {
   fetchDataFailed().then((resp) => {
     expect(resp).toEqual("success");
   });
@@ -15,7 +15,7 @@ test("should showcase use of done", (done) => {
 
 test("should showcase use of expect assertions", () => {
   expect.assertions(1);
-  fetchDataSuccess().then((resp) => {
+  return fetchDataSuccess().then((resp) => {
     expect(resp).toEqual("success");
   });
 });

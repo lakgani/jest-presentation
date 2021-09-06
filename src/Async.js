@@ -1,5 +1,9 @@
 function fetchDataSuccess() {
-  return Promise.resolve("success");
+  return new Promise((res, rej) => {
+    setTimeout(() => {
+      res("success");
+    }, 0);
+  });
 }
 
 function fetchDataFailed() {

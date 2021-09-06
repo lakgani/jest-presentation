@@ -65,8 +65,3 @@ test("toThrow usage", () => {
     throw new Error("something happened");
   }).toThrow("something");
 });
-
-test("resolves/rejects usage", () => {
-  expect(Promise.resolve("success")).resolves.toBe("success");
-  // expect(Promise.reject("failure")).rejects.toBe("success");
-});
