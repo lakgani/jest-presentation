@@ -1,64 +1,72 @@
 ---
-
 # Quick intro to _Jest_
 
 A ___complete___ testing framework for JavaScript.
-
-
 ---
 
 # What does _complete_ mean?
 
-* Test Runner
-* Assertions
-* Mocking
-* Code-coverage
+- Test Runner
+- Assertions
+- Mocking
+- Code-coverage
 
 ---
 
 # Other alternatives
 
-* Mocha (Chai, Sinon, Istanbul)
-* Jasmine
-* AVA
+- Mocha (Chai, Sinon, Istanbul)
+- Jasmine
+- AVA
 
 ---
 
 # Test Runner
 
-* CLI.
-* identify the test files to run.
-* structure the tests
-* report test execution status and results.
-* option to watch files and rerun tests on file updates.
+- CLI.
+- identify the test files to run.
+- structure the tests
+- report test execution status and results.
+- option to watch files and rerun tests on file updates.
 
 ---
+
 # Test Runner
 
 ## CLI
+
+`npx jest`
 ---
 
 # Test Runner
 
 ## Structure the tests
 
+`node tests/Calculator-test.js`
+
 ### test/it
+
 ### describe
 
----
-
-# Test Runner
-
-* only
-* skip
-* todo
+`npm run test calc`
 
 ---
 
 # Test Runner
 
-* BeforeEach, AfterEach
-* BeforeAll, AfterAll
+- only
+- skip
+- todo
+
+`npm run test calc`
+---
+
+# Test Runner
+
+- BeforeEach, AfterEach
+- BeforeAll, AfterAll
+
+`npm run test Conference`
 
 ---
 
@@ -66,29 +74,35 @@ A ___complete___ testing framework for JavaScript.
 
 Expect
 
-* toBe
-* toEqual
-* toBeDefined/toBeUndefined
-* toMatch
-* not
-* toContain
-* toThrow
-* resolves/rejects
+- toBe
+- toEqual
+- toBeDefined/toBeUndefined
+- not
+- toMatch
+- toContain
+- toThrow
+- resolves/rejects
 
+`npm run test expect`
+
+---
+
+# Async testing
+
+- `done()`
+- `expect.assertions()`
+- return promise
+- resolves/rejects
+- async/await
+
+`npm run test async`
 ---
 
 # Mocks
 
-* Spy
-* Stub
-* Mock
-
----
-
-# Mocks
-
-* Mock functions
-* Mock timers
+- Spy
+- Mock
+  - Timers
 
 ---
 
@@ -96,23 +110,16 @@ Expect
 
 ---
 
-# Async testing
-
----
-
-# Snapshot testing
-
----
-
 # Useful config options
-* watch
-* watch-all
-* verbose
-* coverage
-* testTimeout
+
+- watch
+- watch-all
+- verbose
+- coverage
+- testTimeout
 
 ---
 
 # References
 
-* Jest website - https://jestjs.io/
+- Jest website - https://jestjs.io/
